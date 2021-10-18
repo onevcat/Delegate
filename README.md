@@ -160,3 +160,7 @@ a.onDone.delegate(on: self) { (_) in
 
 It seems that you can use the "same" `self`, but actually in the code above you are using the "real" strong `self`. Do not 
 mark the first input parameter of block as `_` and always give it a name of `self` then you can prevent this.
+
+## To Do
+
+- [ ] Async support.
