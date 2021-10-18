@@ -20,7 +20,7 @@ class ClassA {
 class MyClass {
     func askClassAToDoSomething() {
         let a = ClassA()
-        a.onDone.delegate(on: self) { (self) in
+        a.onDone.delegate(on: self) { (self, _) in
             self.jobDone()
         }
         a.doSomething()
@@ -120,7 +120,7 @@ you when the delegate is called. So you can get the correct memory management fo
 
 ```swift
 a.onDone.delegate(on: self) { // This `self` is the delegation target. `onDone` holds a weak ref of it.
-    (self) in                 // This `self` is a shadowed, non-option type.
+    (self, _) in                 // This `self` is a shadowed, non-option type.
     self.jobDone()            // Using of this `self` does not create retain cycle.
 }
 ```
@@ -153,7 +153,7 @@ The only caution is, please always use the shadowed `self` in the delegation blo
 regression to the old `onXXX` property way and causes a retain cycle:
 
 ```swift
-a.onDone.delegate(on: self) { (_) in
+a.onDone.delegate(on: self) { (_, _) in
     self.jobDone()
 }
 ```
