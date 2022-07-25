@@ -85,6 +85,14 @@ public class Delegate<Input, Output> {
     public func callAsFunction(_ input: Input) -> Output? {
         return call(input)
     }
+    
+    public func clear() {
+        block = nil
+    }
+    
+    public var isSet: Bool {
+        return block != nil
+    }
 }
 
 extension Delegate where Input == Void {
