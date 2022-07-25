@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "Delegate"
-  spec.version      = "1.1.0"
+  spec.version      = "1.2.0"
   spec.summary      = "A meta library to provide a better `Delegate` pattern."
 
   spec.description  = <<-DESC
