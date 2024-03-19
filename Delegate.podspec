@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "Delegate"
-  spec.version      = "1.2.0"
+  spec.version      = "1.3.0"
   spec.summary      = "A meta library to provide a better `Delegate` pattern."
 
   spec.description  = <<-DESC
@@ -16,6 +16,7 @@ Pod::Spec.new do |spec|
   spec.osx.deployment_target = "10.12"
   spec.watchos.deployment_target = "2.0"
   spec.tvos.deployment_target = "9.0"
+  spec.visionos.deployment_target = "1.0"
 
   spec.author        = { "Wei Wang" => "onevcat@gmail.com" }
   spec.source        = { :git => "https://github.com/onevcat/Delegate.git", :tag => "#{spec.version}" }
